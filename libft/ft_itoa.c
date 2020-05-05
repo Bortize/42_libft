@@ -10,13 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** transforma un entero en char
+*/
+
 #include "libft.h"
 
 char		*ft_itoa(int n)
 {
 	char	*str;
 
-	if (!(str = (char *)malloc(sizeof(char) * 2)))
+	if (!(str = (char *)malloc(sizeof(char) * 2))) // se multiplica *2 porque es el espacio que ocupa un int (2 bytes)
 		return (NULL);
 	if (n == -2147483648)
 		return (ft_strcpy(str, "-2147483648"));
