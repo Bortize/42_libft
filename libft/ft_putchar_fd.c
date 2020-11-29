@@ -3,26 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bgomez-r <bgomez-r@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 19:37:09 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/28 20:06:39 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2020/11/29 18:53:00 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(const char *str, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-	int i;
-
-	i = 0;
-	if (str)
-	{
-		while (str[i] != '\0')
-		{
-			write(fd, &str[i], 1);
-			i++;
-		}
-	}
+	write(fd, &c, 1);
 }
