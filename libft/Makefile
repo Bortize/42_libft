@@ -6,7 +6,7 @@
 #    By: bgomez-r <bgomez-r@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/04 17:38:10 by bgomez-r          #+#    #+#              #
-#    Updated: 2020/12/03 20:42:59 by bgomez-r         ###   ########.fr        #
+#    Updated: 2020/12/03 20:48:27 by bgomez-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ CFLAGS = -Wall -Wextra -Werror -g
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-all:
+all:	$(NAME)
 
 $(NAME):
 		${CC} ${FLAGS} -c ${FUNCTIONS}
