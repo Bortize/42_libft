@@ -40,6 +40,8 @@ $(NAME):
 		${CC} ${FLAGS} -c ${FUNCTIONS}
 		ar rc ${NAME}	${OBJ}
 		ranlib ${NAME}
+		# Para compilar con un main descomenta la linea de abajo
+		#@$(CC) -g -L ./ libft.a main.c
 
 bonus:
 		${CC} ${FLAGS} -c ${FUNCTIONS} ${FBONUS}
