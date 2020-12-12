@@ -6,7 +6,7 @@
 /*   By: bortize <bortize@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 12:53:15 by bgomez-r          #+#    #+#             */
-/*   Updated: 2020/12/12 18:30:18 by bortize          ###   ########.fr       */
+/*   Updated: 2020/12/12 18:49:54 by bortize          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 				void (*del)(void *));
 char			**ft_split_plus(char const *s, char c, char t);
+char			*ft_strncpy(char *dst, const char *src, size_t n);
 
 #endif
