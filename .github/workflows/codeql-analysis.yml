@@ -60,7 +60,8 @@ jobs:
     #    uses a compiled language
 
     - run: |
-       make all
+        cd libft
+        make all
        
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
