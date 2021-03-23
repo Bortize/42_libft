@@ -6,18 +6,11 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/12 18:28:45 by bortize           #+#    #+#             */
-/*   Updated: 2021/03/23 15:38:56 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/03/23 15:50:23 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** This function removes from the string the characters passed by parameter,
-** and returns an array of strings resulting from the division by the removed
-** character. Its operation is the same as split only that it receives 2
-** characters instead of one.
-*/
 
 static int	ft_countword(char const *s, char c, char t)
 {
@@ -49,6 +42,13 @@ static char	*ft_wordcopy(const char *s, size_t n)
 	str[n] = '\0';
 	return (str);
 }
+
+/*
+** This function removes from the string the characters passed by parameter,
+** and returns an array of strings resulting from the division by the removed
+** character. Its operation is the same as split only that it receives 2
+** characters instead of one.
+*/
 
 char	**ft_split_plus(char const *s, char c, char t)
 {
