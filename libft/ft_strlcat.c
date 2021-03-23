@@ -6,11 +6,17 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 16:14:06 by bgomez-r          #+#    #+#             */
-/*   Updated: 2021/03/18 21:09:28 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/03/23 15:45:11 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** The strcat() function is used for string concatenation. It concatenates
+** the specified string at the end of another specified string up to the size
+** indicated by parameter
+*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

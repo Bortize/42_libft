@@ -6,12 +6,12 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 17:09:25 by bgomez-r          #+#    #+#             */
-/*   Updated: 2021/03/18 20:00:10 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/03/23 15:34:59 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** transforma un entero en char
+** The itoa function converts an integer data type to a char data type.
 */
 
 #include "libft.h"

@@ -6,17 +6,17 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 01:39:00 by bgomez-r          #+#    #+#             */
-/*   Updated: 2021/03/18 21:08:50 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/03/23 15:48:56 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Asigna memoria para devolver una cadeda terminada en '\0', que sera el
-** resultado de la concatenacion de la cadena s1 y s2. Si la asignacion falla
-** devuelve NULL
-*/
-
 #include "libft.h"
+
+/*
+**  Allocate memory to return a string ending in '0', which will be the
+**  result of concatenating the string s1 and s2. If the allocation fails
+**  it returns NULL
+*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

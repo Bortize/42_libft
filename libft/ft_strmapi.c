@@ -6,11 +6,16 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 01:39:03 by bgomez-r          #+#    #+#             */
-/*   Updated: 2021/03/18 21:07:28 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/03/23 15:46:59 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** It applies to each character of the string, a function that is passed as a
+** parameter. Obtaining from each character, a transformation or a check.
+*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,11 +6,17 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/31 13:11:17 by bgomez-r          #+#    #+#             */
-/*   Updated: 2021/03/18 21:02:29 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/03/23 15:37:42 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** This function removes the character passed as a parameter from the string,
+** and returns an array of strings resulting from the division by the removed
+** character.
+*/
 
 static int	ft_countword(char const *s, char c)
 {
