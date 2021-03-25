@@ -6,11 +6,16 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 21:36:11 by bgomez-r          #+#    #+#             */
-/*   Updated: 2021/03/25 21:36:20 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/03/25 21:40:03 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Checks the number of times the character passed
+** as a parameter appears in a string.
+*/
 
 int		ft_countchar(char *str, char c)
 {
