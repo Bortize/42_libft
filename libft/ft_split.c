@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bortize <bortize@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/31 13:11:17 by bgomez-r          #+#    #+#             */
-/*   Updated: 2020/12/12 18:50:52 by bortize          ###   ########.fr       */
+/*   Updated: 2021/10/18 16:00:35 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_countword(char const *s, char c)
+static	int	ft_countword(char const *s, char c)
 {
 	unsigned int	i;
 	int				words;
@@ -31,7 +31,7 @@ static int			ft_countword(char const *s, char c)
 	return (words);
 }
 
-static char			*ft_wordcopy(const char *s, size_t n)
+static char	*ft_wordcopy(const char *s, size_t n)
 {
 	char	*str;
 
@@ -43,7 +43,7 @@ static char			*ft_wordcopy(const char *s, size_t n)
 	return (str);
 }
 
-char				**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -54,7 +54,8 @@ char				**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	k = 0;
-	if (!(tab = (char **)malloc(sizeof(char *) * (ft_countword(s, c)) + 1)))
+	tab = (char **)malloc(sizeof(char *) * (ft_countword(s, c)) + 1);
+	if (!(tab))
 		return (NULL);
 	while (s[i])
 	{
@@ -64,9 +65,7 @@ char				**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-		{
 			tab[k++] = ft_wordcopy(s + j, i - j);
-		}
 	}
 	tab[k] = NULL;
 	return (tab);

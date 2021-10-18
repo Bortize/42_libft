@@ -6,13 +6,13 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/07 02:00:55 by borjagrd          #+#    #+#             */
-/*   Updated: 2019/12/18 14:04:14 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/10/18 15:37:30 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*s1_cpy;
 	size_t	len_s1;

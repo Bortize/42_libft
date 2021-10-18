@@ -6,7 +6,7 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 14:28:21 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/17 16:20:32 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/10/18 15:35:27 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int i;
-	unsigned int src_len;
+	unsigned int	i;
+	unsigned int	src_len;
 
 	if (dst == 0 || src == 0)
 		return (0);

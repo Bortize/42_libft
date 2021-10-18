@@ -6,7 +6,7 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/16 21:46:41 by borjagrd          #+#    #+#             */
-/*   Updated: 2019/12/18 13:43:44 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/10/18 15:33:30 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	first_no_char(char c, char const *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (set[i] != '\0' && set[i] != c)
@@ -26,7 +26,7 @@ static int	first_no_char(char c, char const *set)
 
 static int	pos_first(char const *s, char const *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] && first_no_char(s[i], set))
@@ -36,7 +36,7 @@ static int	pos_first(char const *s, char const *set)
 
 static int	pos_final(char const *s, char const *set)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen(s) - 1;
 	while (i >= 0 && first_no_char(s[i], set))
@@ -44,7 +44,7 @@ static int	pos_final(char const *s, char const *set)
 	return (i);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*aux;
 	int		i;

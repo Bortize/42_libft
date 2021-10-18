@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split_plus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bortize <bortize@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/12 18:28:45 by bortize           #+#    #+#             */
-/*   Updated: 2020/12/12 18:50:12 by bortize          ###   ########.fr       */
+/*   Updated: 2021/10/18 16:01:29 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_countword(char const *s, char c, char t)
+static	int	ft_countword(char const *s, char c, char t)
 {
 	unsigned int	i;
 	int				words;
@@ -31,7 +31,7 @@ static int			ft_countword(char const *s, char c, char t)
 	return (words);
 }
 
-static char			*ft_wordcopy(const char *s, size_t n)
+static	char	*ft_wordcopy(const char *s, size_t n)
 {
 	char	*str;
 
@@ -43,7 +43,7 @@ static char			*ft_wordcopy(const char *s, size_t n)
 	return (str);
 }
 
-char				**ft_split_plus(char const *s, char c, char t)
+char	**ft_split_plus(char const *s, char c, char t)
 {
 	int		i;
 	int		j;
@@ -54,7 +54,8 @@ char				**ft_split_plus(char const *s, char c, char t)
 		return (NULL);
 	i = 0;
 	k = 0;
-	if (!(tab = (char **)malloc(sizeof(char *) * (ft_countword(s, c, t)) + 1)))
+	tab = (char **)malloc(sizeof(char *) * (ft_countword(s, c, t)) + 1);
+	if (!(tab))
 		return (NULL);
 	while (s[i])
 	{
@@ -64,9 +65,7 @@ char				**ft_split_plus(char const *s, char c, char t)
 		while (s[i] && ((s[i] != c) && (s[i] != t)))
 			i++;
 		if (i > j)
-		{
 			tab[k++] = ft_wordcopy(s + j, i - j);
-		}
 	}
 	tab[k] = NULL;
 	return (tab);

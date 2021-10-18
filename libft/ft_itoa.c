@@ -6,7 +6,7 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 17:09:25 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/12/30 13:05:53 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/10/18 15:59:09 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@
 
 #include "libft.h"
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 
-	if (!(str = (char *)malloc(sizeof(char) * 2))) // se multiplica *2 porque es el espacio que ocupa un int (2 bytes)
+	str = (char *)malloc(sizeof(char) * 2);
+	if (!(str))
 		return (NULL);
 	if (n == -2147483648)
 		return (ft_strcpy(str, "-2147483648"));
