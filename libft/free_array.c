@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   free_array.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 17:54:53 by bgomez-r          #+#    #+#             */
-/*   Updated: 2021/10/18 17:10:32 by bgomez-r         ###   ########.fr       */
+/*   Created: 2021/10/18 17:02:10 by bgomez-r          #+#    #+#             */
+/*   Updated: 2021/10/18 17:02:28 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
-{
-	size_t		i;
-	char		*dst1;
-	const char	*src1;
+/*
+** This function fully frees an allocated bidimensional array
+*/
 
-	if (len == 0 || dst == src)
-		return (dst);
-	dst1 = dst;
-	src1 = src;
+void	free_array(char **array)
+{
+	int	i;
+
 	i = 0;
-	if (src > dst)
+	while (array[i] != '\0')
 	{
-		while (i < len)
-		{
-			dst1[i] = src1[i];
-			i++;
-		}
+		free(array[i]);
+		i++;
 	}
-	else
-	{
-		while (len-- > 0)
-			dst1[len] = src1[len];
-	}
-	return (dst1);
+	free(array);
 }
