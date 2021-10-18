@@ -35,7 +35,6 @@ CFLAGS = -Wall -Wextra -Werror -g
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 all: bonus
-		$(NAME)
 
 $(NAME):
 		${CC} ${FLAGS} -c ${FUNCTIONS}
