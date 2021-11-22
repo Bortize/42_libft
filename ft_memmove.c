@@ -6,7 +6,7 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:54:53 by bgomez-r          #+#    #+#             */
-/*   Updated: 2021/10/18 15:56:51 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/10/18 17:10:32 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (len > 0)
-			dst1[len--] = src1[len--];
+		while (len-- > 0)
+			dst1[len] = src1[len];
 	}
 	return (dst1);
 }
