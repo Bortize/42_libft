@@ -1,0 +1,35 @@
+name: minishell
+
+############# CONFIGURE THE BRANCHES TO RUN#########
+
+on:
+  push:
+    branches: [development, builtins]
+
+############## ENVIROMENT PREPARATION ##############
+
+jobs:
+  build:
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [macos-latest]
+#        enviroment: [xterm-256color]
+    name: ${{matrix.os}}
+#   env:
+#      TERM: ${{matrix.enviroment}}
+      
+#################### TASKS ########################
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+#    - name: Checkout submodules
+#     uses: srt32/git-actions@v0.0.3
+#      with:
+#       args: git submodule update --init --recursive
+      
+    - name: Make
+      working-directory: libft
+      run: make re
