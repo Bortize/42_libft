@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bgomez-r <bgomez-r@student.42madrid.com>>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 12:53:15 by bgomez-r          #+#    #+#             */
-/*   Updated: 2021/11/22 14:33:34 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2021/12/16 16:28:33 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *),
 				void (*del)(void *));
 char		**ft_split_plus(char const *s, char c, char t);
 int			ft_countchar(char *str, char c);
+int			ft_strlen_matrix(char **str);
 
 /////////////////	ADITIONAL FUNCTIONS		/////////////////
 
